@@ -1,5 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+import { AsociacionScreen } from "../AsociacionScreen";
 import { DcScreen } from "../Components/dc/DcScreen";
 import { HeroesScreen } from "../Components/heroes/HeroesScreen";
 import { MarvelScreen } from "../Components/marvel/MarvelScreen";
@@ -18,6 +19,7 @@ export const DashboarRouter = () => {
           <Route path="/marvel" element={<MarvelScreen />} />
           <Route path="/dc" element={<DcScreen />} />
           <Route path="/search" element={<SearchScreen />} />
+          <Route path="/Asociaciones" element={<AsociacionScreen />} />
           <Route path="/" element={<HomeScreen />} />
           <Route path="*" element={<HomeScreen />} />
         </Routes>

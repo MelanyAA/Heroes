@@ -5,6 +5,7 @@ import { useForm } from "../../hook/useForm";
 import { HeroeCard } from "../heroes/HeroeCard";
 import queryString from "query-string";
 import { getHeroeByName } from "../../Selector/getHeroeByName";
+import Swal from "sweetalert2";
 
 export const SearchScreen = () => {
   ///---Si tengo Muchos Queri String escribo en la ruta o en input ejem : batman&casa=dcs
@@ -25,6 +26,14 @@ export const SearchScreen = () => {
 
   //Rraemos la funcion getHeroeByName
   const heroesFiltered = getHeroeByName(descripcion);
+
+  // Validacion si el elemento no es encontrado
+  if (descripcion !== "") {
+    if (heroesFiltered.length === 0) {
+      Swal.fire("No Encontrado", `El Heroe "${descripcion}" no Existe`, "info");
+    }
+  }
+
   //Declaramos la constante para Navegar
   const navigate = useNavigate();
   const handleSearch = (e) => {
@@ -33,7 +42,7 @@ export const SearchScreen = () => {
     navigate(`?q=${descripcion}`);
     reset();
   };
- 
+
   return (
     <>
       <div className="container">
@@ -52,8 +61,14 @@ export const SearchScreen = () => {
                 onChange={handleInputChange}
               />
               <div className="text-center mt-3">
-                <button type="submit" className="btn btn-outline-success">
+                <button type="submit" className="btn btn-outline-success mx-2">
                   Buscar
+                </button>
+                <button
+                  className="btn btn-outline-warning"
+                  onClick={() => navigate("/")}
+                >
+                  Regresar
                 </button>
               </div>
             </form>

@@ -1,0 +1,16 @@
+body {
+  margin-top: 60px;
+}
+.imgHome {
+  height: 200px;
+  max-height: 300px;
+  overflow: hidden;
+}
+
+.buttonHome {
+  width: 100px;
+}
+.letter {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bold;
+}
