@@ -6,6 +6,7 @@ import { HeroeCard } from "../heroes/HeroeCard";
 import queryString from "query-string";
 import { getHeroeByName } from "../../Selector/getHeroeByName";
 import Swal from "sweetalert2";
+import "../../index.css";
 
 export const SearchScreen = () => {
   ///---Si tengo Muchos Queri String escribo en la ruta o en input ejem : batman&casa=dcs
@@ -61,11 +62,14 @@ export const SearchScreen = () => {
                 onChange={handleInputChange}
               />
               <div className="text-center mt-3">
-                <button type="submit" className="btn btn-outline-success mx-2">
+                <button
+                  type="submit"
+                  className="btn btn-outline-success mx-2 button-width"
+                >
                   Buscar
                 </button>
                 <button
-                  className="btn btn-outline-warning"
+                  className="btn btn-outline-warning button-width"
                   onClick={() => navigate("/")}
                 >
                   Regresar

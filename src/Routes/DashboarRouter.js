@@ -15,13 +15,13 @@ export const DashboarRouter = () => {
       <NavBar />
       <div>
         <Routes>
-          <Route path="/hero/:heroeId" element={<HeroesScreen />} />
-          <Route path="/marvel" element={<MarvelScreen />} />
-          <Route path="/dc" element={<DcScreen />} />
-          <Route path="/search" element={<SearchScreen />} />
-          <Route path="/Asociaciones" element={<AsociacionScreen />} />
-          <Route path="/" element={<HomeScreen />} />
-          <Route path="*" element={<HomeScreen />} />
+          <Route exact path="/hero/:heroeId" element={<HeroesScreen />} />
+          <Route exact path="/marvel" element={<MarvelScreen />} />
+          <Route exact path="/dc" element={<DcScreen />} />
+          <Route exact path="/search" element={<SearchScreen />} />
+          <Route exact path="/asociaciones" element={<AsociacionScreen />} />
+          <Route exact path="/" element={<HomeScreen />} />
+          <Route exact path="*" element={<HomeScreen />} />
         </Routes>
       </div>
       <Footer />

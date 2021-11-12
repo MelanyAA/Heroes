@@ -2,14 +2,13 @@ import React, { useMemo } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { getHeroeById } from "../../Selector/getHeroeById";
 
+import '../../index.css';
+
 export const HeroesScreen = () => {
   const { heroeId } = useParams();
-  //   console.log(heroeId);
+ 
   const hero = useMemo(() => getHeroeById(heroeId), [heroeId]);
 
-  if (!hero) {
-    // return <Link className="nav-link" to="/" />;
-  }
 
   const navigate = useNavigate();
 
@@ -52,7 +51,7 @@ export const HeroesScreen = () => {
             </h2>
             <div className="text-center mt-4">
               <button
-                className="btn btn-outline-primary btn-block"
+                className="btn btn-outline-primary btn-block button-width"
                 onClick={() => navigate(-1)}
               >
                 Salir..

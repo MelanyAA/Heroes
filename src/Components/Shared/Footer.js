@@ -4,7 +4,7 @@ export const Footer = () => {
   return (
     <>
       {/* <!-- Remove the container if you want to extend the Footer to full width. --> */}
-      <div className="my-5">
+      <div className="my-5 footer">
         <footer
           className="text-center text-white"
           style={{ "background-color": "#f1f1f1" }}

@@ -7,16 +7,17 @@ import { DashboarRouter } from "./DashboarRouter";
 
 export const AppRouter = () => {
   const { user } = useContext(AuthContext);
+
+  console.log(user.logged);
   return (
     <Router>
       <div>
         <Routes>
-          <Route path="/Login" element={<LoginScreen />} />
+          <Route exact path="/login" element={<LoginScreen />} />
           <Route
-            path="/"
+            path="*"
             element={user.logged ? <DashboarRouter /> : <LoginScreen />}
           />
-          <Route path="*" element={<DashboarRouter />} />
         </Routes>
       </div>
     </Router>

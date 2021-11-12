@@ -15,8 +15,8 @@ export const HeroeCard = ({
       <h3
         className={
           publisher === "Marvel Comics"
-            ? "card-title text-center marvel"
-            : "card-title text-center dcclass "
+            ? "card-title text-center marvel-tittle"
+            : "card-title text-center dc-tittle"
         }
       >
         {superhero}
@@ -31,8 +31,8 @@ export const HeroeCard = ({
         <h3
           className={
             publisher === "Marvel Comics"
-              ? "card-title text-center marvel"
-              : "card-title text-center dcclass "
+              ? "card-title text-center marvel-tittle"
+              : "card-title text-center dc-tittle"
           }
         >
           {publisher}
